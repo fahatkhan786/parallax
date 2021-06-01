@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="main.js"></script>
+    <title>Parallax Website</title>
+  </head>
+  <body>
+    <section>
+      <header>
+        <a href="" class="logo">World</a>
+        <div class="toggle"></div>
+      </header>
+      <img src="bg.jpg" alt="bg" class="bg" />
+      <img src="bird.png" alt="bird" class="bird" />
+      <div class="content">
+        <h2>We can save The<br /><span>Earth</span></h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex velit
+          architecto, nulla quis enim sunt praesentium laborum ducimus illum
+          odio corrupti esse quibusdam molestiae sed, voluptas dolore? In,
+          molestias nisi!
+        </p>
+        <a href="">Join us</a>
+      </div>
+      <ul class="social">
+        <li>
+          <a href=""><img src="facebook.png" alt="" /></a>
+        </li>
+        <li>
+          <a href=""><img src="instagram.png" alt="" /></a>
+        </li>
+        <li>
+          <a href=""><img src="twitter.png" alt="" /></a>
+        </li>
+      </ul>
+      <div class="txtblox">
+        <div class="block b1">
+          <h3>defender of earth</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            incidunt id ducimus sed natus.
+          </p>
+        </div>
+        <div class="block b2">
+          <h3>Save water</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            incidunt id ducimus sed natus.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script type="text/javascript">
+    document.addEventListener("mousemove", function (e) {
+      const bg = document.querySelector(".bg");
+      const bird = document.querySelector(".bird");
+      const content = document.querySelector(".content");
+      const b1 = document.querySelector(".b1");
+      const b2 = document.querySelector(".b2");
+
+      bg.style.width = 100 + e.pageX / 100 + "%";
+      bg.style.height = 100 + e.pageX / 100 + "%";
+
+      bird.style.right = 100 + e.pageX / 1.8 + "px";
+      content.style.left = 100 + e.pageX / 2.5 + "px";
+
+      //   b1.style.left = e.pageX / 2.2 + "px";
+      //   b2.style.right = e.pageX / 2.2 + "px";
+    });
+  </script>
+</html>
